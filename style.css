@@ -165,3 +165,28 @@ body.light-mode .moon-icon{opacity:0;transform:rotate(30deg) scale(.72)}
   .footer-links{gap:12px}
   .footer-links a span{display:none}
 }
+
+
+/* --- Project cards: image cover + Challenge / Solution / Result --- */
+.project-visual-img{display:flex;align-items:center;justify-content:center;background:#fff;min-height:0;align-self:stretch;padding:14px}
+.project-visual-img img{width:100%;height:auto;max-height:100%;min-height:0;object-fit:contain;object-position:center;display:block;transition:transform .5s ease}
+.project-card:hover .project-visual-img img{transform:scale(1.04)}
+.project-details h3 a{color:inherit;text-decoration:none;transition:color .25s}
+.project-details h3 a:hover{color:var(--accent)}
+.project-details .project-story{margin-top:16px;display:grid;gap:11px}
+.project-story>div{display:grid;grid-template-columns:78px 1fr;gap:12px;align-items:start}
+.project-story dt{font:500 10px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--accent);padding-top:3px}
+.project-story dd{font-size:12.5px;line-height:1.6;color:var(--muted);max-width:none}
+.project-details .project-story dd{max-width:none}
+.project-card{min-height:0}
+.project-footer a{border:1px solid var(--line);border-radius:99px;padding:8px 14px;white-space:nowrap;transition:.25s}
+.project-footer a:hover{border-color:var(--accent)}
+@media(max-width:800px){
+  .project-visual-img img{max-height:300px}
+  .project-story>div{grid-template-columns:70px 1fr;gap:10px}
+  .project-story dd{font-size:12px}
+}
+@media(max-width:480px){
+  .project-story>div{grid-template-columns:1fr;gap:3px}
+  .project-footer a{align-self:flex-start}
+}
